@@ -1,0 +1,32 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package via.sdj3.slaughterhouse.protobuf.animaltype;
+
+service AnimalTypeService
+{
+  rpc createAnimalType(CreateAnimalTypeRequest) returns(CreateAnimalTypeResponse);
+  rpc getAnimalType(GetAnimalTypeRequest) returns(GetAnimalTypeResponse);
+}
+
+message CreateAnimalTypeRequest
+{
+  string name = 1;
+  string description = 2;
+}
+
+message CreateAnimalTypeResponse
+{
+  string confirmation = 1;
+}
+
+message GetAnimalTypeRequest
+{
+  int32 id = 1;
+}
+
+message GetAnimalTypeResponse
+{
+  int32 id = 1;
+  string name = 2;
+  string description = 3;
+}

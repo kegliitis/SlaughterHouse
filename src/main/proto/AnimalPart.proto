@@ -1,0 +1,34 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package via.sdj3.slaughterhouse.protobuf.animalpart;
+
+service AnimalPartService
+{
+  rpc createAnimalPart(CreateAnimalPartRequest) returns(CreateAnimalPartResponse);
+  rpc getAnimalPart(GetAnimalPartRequest) returns(GetAnimalPartResponse);
+}
+
+message CreateAnimalPartRequest
+{
+  double weight = 1;
+  int32 animalId = 2;
+  int32 trayId = 3;
+  int32 animalPartTypeId = 4;
+}
+
+message CreateAnimalPartResponse
+{
+  string confirmation = 1;
+}
+
+message GetAnimalPartRequest
+{
+  int32 id = 1;
+}
+
+message GetAnimalPartResponse
+{
+  int32 id = 1;
+  double weight = 2;
+  int32 animalId = 3;
+}

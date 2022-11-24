@@ -1,0 +1,34 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package via.sdj3.slaughterhouse.protobuf.tray;
+
+service TrayService
+{
+  rpc CreateTray(CreateTrayRequest) returns(CreateTrayResponse);
+  rpc GetTray(GetTrayRequest) returns(GetTrayResponse);
+}
+
+message CreateTrayRequest
+{
+  string description = 1;
+  double weight = 2;
+  repeated int32 animalPartIds = 3;
+}
+
+message CreateTrayResponse
+{
+  string confirmation = 1;
+}
+
+message GetTrayRequest
+{
+  int32 id = 1;
+}
+
+message GetTrayResponse
+{
+  int32 id = 1;
+  string description = 2;
+  double weight = 3;
+  repeated int32 animalPartIds = 4;
+}
