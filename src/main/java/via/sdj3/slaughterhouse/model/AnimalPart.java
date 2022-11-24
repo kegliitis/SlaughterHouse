@@ -20,13 +20,21 @@ public class AnimalPart
     @ManyToOne
     private Product product;
 
-    public AnimalPart(int id, Animal animal, AnimalPartType animalPartType, Tray tray, Product product)
+    public AnimalPart(int id, double weight, Animal animal, AnimalPartType animalPartType, Tray tray, Product product)
     {
         this.id = id;
+        this.weight = weight;
         this.animal = animal;
         this.animalPartType = animalPartType;
         this.tray = tray;
         this.product = product;
+    }
+
+    public AnimalPart(int id, double weight, Animal animal)
+    {
+        this.id = id;
+        this.weight = weight;
+        this.animal = animal;
     }
 
     public AnimalPart()
@@ -81,5 +89,15 @@ public class AnimalPart
     public void setProduct(Product product)
     {
         this.product = product;
+    }
+
+    public double getWeight()
+    {
+        return weight;
+    }
+
+    public void setWeight(double weight)
+    {
+        this.weight = weight;
     }
 }
