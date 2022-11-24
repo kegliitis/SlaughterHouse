@@ -14,37 +14,31 @@ public interface GetAnimalResponseOrBuilder extends
   int getAnimalId();
 
   /**
-   * <code>int32 farmId = 2;</code>
-   * @return The farmId.
-   */
-  int getFarmId();
-
-  /**
-   * <code>int32 animalTypeId = 3;</code>
+   * <code>int32 animalTypeId = 2;</code>
    * @return The animalTypeId.
    */
   int getAnimalTypeId();
 
   /**
-   * <code>double weight = 4;</code>
+   * <code>double weight = 3;</code>
    * @return The weight.
    */
   double getWeight();
 
   /**
-   * <code>string registrationDate = 5;</code>
+   * <code>string registrationDate = 4;</code>
    * @return The registrationDate.
    */
   java.lang.String getRegistrationDate();
   /**
-   * <code>string registrationDate = 5;</code>
+   * <code>string registrationDate = 4;</code>
    * @return The bytes for registrationDate.
    */
   com.google.protobuf.ByteString
       getRegistrationDateBytes();
 
   /**
-   * <code>bool healthy = 6;</code>
+   * <code>bool healthy = 5;</code>
    * @return The healthy.
    */
   boolean getHealthy();

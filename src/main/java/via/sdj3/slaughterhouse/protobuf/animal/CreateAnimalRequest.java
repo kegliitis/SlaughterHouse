@@ -51,26 +51,21 @@ private static final long serialVersionUID = 0L;
             break;
           case 8: {
 
-            farmId_ = input.readInt32();
-            break;
-          }
-          case 16: {
-
             animalTypeId_ = input.readInt32();
             break;
           }
-          case 25: {
+          case 17: {
 
             weight_ = input.readDouble();
             break;
           }
-          case 34: {
+          case 26: {
             java.lang.String s = input.readStringRequireUtf8();
 
             registrationDate_ = s;
             break;
           }
-          case 40: {
+          case 32: {
 
             healthy_ = input.readBool();
             break;
@@ -109,21 +104,10 @@ private static final long serialVersionUID = 0L;
             via.sdj3.slaughterhouse.protobuf.animal.CreateAnimalRequest.class, via.sdj3.slaughterhouse.protobuf.animal.CreateAnimalRequest.Builder.class);
   }
 
-  public static final int FARMID_FIELD_NUMBER = 1;
-  private int farmId_;
-  /**
-   * <code>int32 farmId = 1;</code>
-   * @return The farmId.
-   */
-  @java.lang.Override
-  public int getFarmId() {
-    return farmId_;
-  }
-
-  public static final int ANIMALTYPEID_FIELD_NUMBER = 2;
+  public static final int ANIMALTYPEID_FIELD_NUMBER = 1;
   private int animalTypeId_;
   /**
-   * <code>int32 animalTypeId = 2;</code>
+   * <code>int32 animalTypeId = 1;</code>
    * @return The animalTypeId.
    */
   @java.lang.Override
@@ -131,10 +115,10 @@ private static final long serialVersionUID = 0L;
     return animalTypeId_;
   }
 
-  public static final int WEIGHT_FIELD_NUMBER = 3;
+  public static final int WEIGHT_FIELD_NUMBER = 2;
   private double weight_;
   /**
-   * <code>double weight = 3;</code>
+   * <code>double weight = 2;</code>
    * @return The weight.
    */
   @java.lang.Override
@@ -142,10 +126,10 @@ private static final long serialVersionUID = 0L;
     return weight_;
   }
 
-  public static final int REGISTRATIONDATE_FIELD_NUMBER = 4;
+  public static final int REGISTRATIONDATE_FIELD_NUMBER = 3;
   private volatile java.lang.Object registrationDate_;
   /**
-   * <code>string registrationDate = 4;</code>
+   * <code>string registrationDate = 3;</code>
    * @return The registrationDate.
    */
   @java.lang.Override
@@ -162,7 +146,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string registrationDate = 4;</code>
+   * <code>string registrationDate = 3;</code>
    * @return The bytes for registrationDate.
    */
   @java.lang.Override
@@ -180,10 +164,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int HEALTHY_FIELD_NUMBER = 5;
+  public static final int HEALTHY_FIELD_NUMBER = 4;
   private boolean healthy_;
   /**
-   * <code>bool healthy = 5;</code>
+   * <code>bool healthy = 4;</code>
    * @return The healthy.
    */
   @java.lang.Override
@@ -205,20 +189,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (farmId_ != 0) {
-      output.writeInt32(1, farmId_);
-    }
     if (animalTypeId_ != 0) {
-      output.writeInt32(2, animalTypeId_);
+      output.writeInt32(1, animalTypeId_);
     }
     if (java.lang.Double.doubleToRawLongBits(weight_) != 0) {
-      output.writeDouble(3, weight_);
+      output.writeDouble(2, weight_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registrationDate_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, registrationDate_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, registrationDate_);
     }
     if (healthy_ != false) {
-      output.writeBool(5, healthy_);
+      output.writeBool(4, healthy_);
     }
     unknownFields.writeTo(output);
   }
@@ -229,24 +210,20 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (farmId_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(1, farmId_);
-    }
     if (animalTypeId_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(2, animalTypeId_);
+        .computeInt32Size(1, animalTypeId_);
     }
     if (java.lang.Double.doubleToRawLongBits(weight_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(3, weight_);
+        .computeDoubleSize(2, weight_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registrationDate_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, registrationDate_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, registrationDate_);
     }
     if (healthy_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(5, healthy_);
+        .computeBoolSize(4, healthy_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -263,8 +240,6 @@ private static final long serialVersionUID = 0L;
     }
     via.sdj3.slaughterhouse.protobuf.animal.CreateAnimalRequest other = (via.sdj3.slaughterhouse.protobuf.animal.CreateAnimalRequest) obj;
 
-    if (getFarmId()
-        != other.getFarmId()) return false;
     if (getAnimalTypeId()
         != other.getAnimalTypeId()) return false;
     if (java.lang.Double.doubleToLongBits(getWeight())
@@ -285,8 +260,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + FARMID_FIELD_NUMBER;
-    hash = (53 * hash) + getFarmId();
     hash = (37 * hash) + ANIMALTYPEID_FIELD_NUMBER;
     hash = (53 * hash) + getAnimalTypeId();
     hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
@@ -430,8 +403,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      farmId_ = 0;
-
       animalTypeId_ = 0;
 
       weight_ = 0D;
@@ -466,7 +437,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public via.sdj3.slaughterhouse.protobuf.animal.CreateAnimalRequest buildPartial() {
       via.sdj3.slaughterhouse.protobuf.animal.CreateAnimalRequest result = new via.sdj3.slaughterhouse.protobuf.animal.CreateAnimalRequest(this);
-      result.farmId_ = farmId_;
       result.animalTypeId_ = animalTypeId_;
       result.weight_ = weight_;
       result.registrationDate_ = registrationDate_;
@@ -519,9 +489,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(via.sdj3.slaughterhouse.protobuf.animal.CreateAnimalRequest other) {
       if (other == via.sdj3.slaughterhouse.protobuf.animal.CreateAnimalRequest.getDefaultInstance()) return this;
-      if (other.getFarmId() != 0) {
-        setFarmId(other.getFarmId());
-      }
       if (other.getAnimalTypeId() != 0) {
         setAnimalTypeId(other.getAnimalTypeId());
       }
@@ -564,40 +531,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int farmId_ ;
-    /**
-     * <code>int32 farmId = 1;</code>
-     * @return The farmId.
-     */
-    @java.lang.Override
-    public int getFarmId() {
-      return farmId_;
-    }
-    /**
-     * <code>int32 farmId = 1;</code>
-     * @param value The farmId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setFarmId(int value) {
-      
-      farmId_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int32 farmId = 1;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearFarmId() {
-      
-      farmId_ = 0;
-      onChanged();
-      return this;
-    }
-
     private int animalTypeId_ ;
     /**
-     * <code>int32 animalTypeId = 2;</code>
+     * <code>int32 animalTypeId = 1;</code>
      * @return The animalTypeId.
      */
     @java.lang.Override
@@ -605,7 +541,7 @@ private static final long serialVersionUID = 0L;
       return animalTypeId_;
     }
     /**
-     * <code>int32 animalTypeId = 2;</code>
+     * <code>int32 animalTypeId = 1;</code>
      * @param value The animalTypeId to set.
      * @return This builder for chaining.
      */
@@ -616,7 +552,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 animalTypeId = 2;</code>
+     * <code>int32 animalTypeId = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearAnimalTypeId() {
@@ -628,7 +564,7 @@ private static final long serialVersionUID = 0L;
 
     private double weight_ ;
     /**
-     * <code>double weight = 3;</code>
+     * <code>double weight = 2;</code>
      * @return The weight.
      */
     @java.lang.Override
@@ -636,7 +572,7 @@ private static final long serialVersionUID = 0L;
       return weight_;
     }
     /**
-     * <code>double weight = 3;</code>
+     * <code>double weight = 2;</code>
      * @param value The weight to set.
      * @return This builder for chaining.
      */
@@ -647,7 +583,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>double weight = 3;</code>
+     * <code>double weight = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearWeight() {
@@ -659,7 +595,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object registrationDate_ = "";
     /**
-     * <code>string registrationDate = 4;</code>
+     * <code>string registrationDate = 3;</code>
      * @return The registrationDate.
      */
     public java.lang.String getRegistrationDate() {
@@ -675,7 +611,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string registrationDate = 4;</code>
+     * <code>string registrationDate = 3;</code>
      * @return The bytes for registrationDate.
      */
     public com.google.protobuf.ByteString
@@ -692,7 +628,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string registrationDate = 4;</code>
+     * <code>string registrationDate = 3;</code>
      * @param value The registrationDate to set.
      * @return This builder for chaining.
      */
@@ -707,7 +643,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string registrationDate = 4;</code>
+     * <code>string registrationDate = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearRegistrationDate() {
@@ -717,7 +653,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string registrationDate = 4;</code>
+     * <code>string registrationDate = 3;</code>
      * @param value The bytes for registrationDate to set.
      * @return This builder for chaining.
      */
@@ -735,7 +671,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean healthy_ ;
     /**
-     * <code>bool healthy = 5;</code>
+     * <code>bool healthy = 4;</code>
      * @return The healthy.
      */
     @java.lang.Override
@@ -743,7 +679,7 @@ private static final long serialVersionUID = 0L;
       return healthy_;
     }
     /**
-     * <code>bool healthy = 5;</code>
+     * <code>bool healthy = 4;</code>
      * @param value The healthy to set.
      * @return This builder for chaining.
      */
@@ -754,7 +690,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool healthy = 5;</code>
+     * <code>bool healthy = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearHealthy() {

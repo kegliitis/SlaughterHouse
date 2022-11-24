@@ -54,29 +54,28 @@ public final class Animal {
   static {
     java.lang.String[] descriptorData = {
       "\n\014Animal.proto\022\'via.sdj3.slaughterhouse." +
-      "protobuf.animal\"v\n\023CreateAnimalRequest\022\016" +
-      "\n\006farmId\030\001 \001(\005\022\024\n\014animalTypeId\030\002 \001(\005\022\016\n\006" +
-      "weight\030\003 \001(\001\022\030\n\020registrationDate\030\004 \001(\t\022\017" +
-      "\n\007healthy\030\005 \001(\010\",\n\024CreateAnimalResponse\022" +
-      "\024\n\014confirmation\030\001 \001(\t\"$\n\020GetAnimalReques" +
-      "t\022\020\n\010animalId\030\001 \001(\005\"\206\001\n\021GetAnimalRespons" +
-      "e\022\020\n\010animalId\030\001 \001(\005\022\016\n\006farmId\030\002 \001(\005\022\024\n\014a" +
-      "nimalTypeId\030\003 \001(\005\022\016\n\006weight\030\004 \001(\001\022\030\n\020reg" +
-      "istrationDate\030\005 \001(\t\022\017\n\007healthy\030\006 \001(\010\"(\n\023" +
-      "GetAnimalIdsRequest\022\021\n\tproductId\030\001 \001(\005\")" +
-      "\n\024GetAnimalIdsResponse\022\021\n\tanimalIds\030\001 \003(" +
-      "\0052\260\003\n\rAnimalService\022\213\001\n\014createAnimal\022<.v" +
-      "ia.sdj3.slaughterhouse.protobuf.animal.C" +
-      "reateAnimalRequest\032=.via.sdj3.slaughterh" +
-      "ouse.protobuf.animal.CreateAnimalRespons" +
-      "e\022\202\001\n\tgetAnimal\0229.via.sdj3.slaughterhous" +
-      "e.protobuf.animal.GetAnimalRequest\032:.via" +
-      ".sdj3.slaughterhouse.protobuf.animal.Get" +
-      "AnimalResponse\022\213\001\n\014getAnimalIds\022<.via.sd" +
-      "j3.slaughterhouse.protobuf.animal.GetAni" +
-      "malIdsRequest\032=.via.sdj3.slaughterhouse." +
-      "protobuf.animal.GetAnimalIdsResponseB\002P\001" +
-      "b\006proto3"
+      "protobuf.animal\"f\n\023CreateAnimalRequest\022\024" +
+      "\n\014animalTypeId\030\001 \001(\005\022\016\n\006weight\030\002 \001(\001\022\030\n\020" +
+      "registrationDate\030\003 \001(\t\022\017\n\007healthy\030\004 \001(\010\"" +
+      ",\n\024CreateAnimalResponse\022\024\n\014confirmation\030" +
+      "\001 \001(\t\"$\n\020GetAnimalRequest\022\020\n\010animalId\030\001 " +
+      "\001(\005\"v\n\021GetAnimalResponse\022\020\n\010animalId\030\001 \001" +
+      "(\005\022\024\n\014animalTypeId\030\002 \001(\005\022\016\n\006weight\030\003 \001(\001" +
+      "\022\030\n\020registrationDate\030\004 \001(\t\022\017\n\007healthy\030\005 " +
+      "\001(\010\"(\n\023GetAnimalIdsRequest\022\021\n\tproductId\030" +
+      "\001 \001(\005\")\n\024GetAnimalIdsResponse\022\021\n\tanimalI" +
+      "ds\030\001 \003(\0052\260\003\n\rAnimalService\022\213\001\n\014createAni" +
+      "mal\022<.via.sdj3.slaughterhouse.protobuf.a" +
+      "nimal.CreateAnimalRequest\032=.via.sdj3.sla" +
+      "ughterhouse.protobuf.animal.CreateAnimal" +
+      "Response\022\202\001\n\tgetAnimal\0229.via.sdj3.slaugh" +
+      "terhouse.protobuf.animal.GetAnimalReques" +
+      "t\032:.via.sdj3.slaughterhouse.protobuf.ani" +
+      "mal.GetAnimalResponse\022\213\001\n\014getAnimalIds\022<" +
+      ".via.sdj3.slaughterhouse.protobuf.animal" +
+      ".GetAnimalIdsRequest\032=.via.sdj3.slaughte" +
+      "rhouse.protobuf.animal.GetAnimalIdsRespo" +
+      "nseB\002P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -87,7 +86,7 @@ public final class Animal {
     internal_static_via_sdj3_slaughterhouse_protobuf_animal_CreateAnimalRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_via_sdj3_slaughterhouse_protobuf_animal_CreateAnimalRequest_descriptor,
-        new java.lang.String[] { "FarmId", "AnimalTypeId", "Weight", "RegistrationDate", "Healthy", });
+        new java.lang.String[] { "AnimalTypeId", "Weight", "RegistrationDate", "Healthy", });
     internal_static_via_sdj3_slaughterhouse_protobuf_animal_CreateAnimalResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_via_sdj3_slaughterhouse_protobuf_animal_CreateAnimalResponse_fieldAccessorTable = new
@@ -105,7 +104,7 @@ public final class Animal {
     internal_static_via_sdj3_slaughterhouse_protobuf_animal_GetAnimalResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_via_sdj3_slaughterhouse_protobuf_animal_GetAnimalResponse_descriptor,
-        new java.lang.String[] { "AnimalId", "FarmId", "AnimalTypeId", "Weight", "RegistrationDate", "Healthy", });
+        new java.lang.String[] { "AnimalId", "AnimalTypeId", "Weight", "RegistrationDate", "Healthy", });
     internal_static_via_sdj3_slaughterhouse_protobuf_animal_GetAnimalIdsRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_via_sdj3_slaughterhouse_protobuf_animal_GetAnimalIdsRequest_fieldAccessorTable = new

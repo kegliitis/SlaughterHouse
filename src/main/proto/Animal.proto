@@ -11,11 +11,10 @@ service AnimalService
 
 message CreateAnimalRequest
 {
-  int32 farmId = 1;
-  int32 animalTypeId = 2;
-  double weight = 3;
-  string registrationDate = 4;
-  bool healthy = 5;
+  int32 animalTypeId = 1;
+  double weight = 2;
+  string registrationDate = 3;
+  bool healthy = 4;
 }
 
 message CreateAnimalResponse
@@ -31,11 +30,10 @@ message GetAnimalRequest
 message GetAnimalResponse
 {
   int32 animalId = 1;
-  int32 farmId = 2;
-  int32 animalTypeId = 3;
-  double weight = 4;
-  string registrationDate = 5;
-  bool healthy = 6;
+  int32 animalTypeId = 2;
+  double weight = 3;
+  string registrationDate = 4;
+  bool healthy = 5;
 }
 
 message GetAnimalIdsRequest

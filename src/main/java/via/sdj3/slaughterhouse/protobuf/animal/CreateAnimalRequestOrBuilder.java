@@ -8,37 +8,31 @@ public interface CreateAnimalRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 farmId = 1;</code>
-   * @return The farmId.
-   */
-  int getFarmId();
-
-  /**
-   * <code>int32 animalTypeId = 2;</code>
+   * <code>int32 animalTypeId = 1;</code>
    * @return The animalTypeId.
    */
   int getAnimalTypeId();
 
   /**
-   * <code>double weight = 3;</code>
+   * <code>double weight = 2;</code>
    * @return The weight.
    */
   double getWeight();
 
   /**
-   * <code>string registrationDate = 4;</code>
+   * <code>string registrationDate = 3;</code>
    * @return The registrationDate.
    */
   java.lang.String getRegistrationDate();
   /**
-   * <code>string registrationDate = 4;</code>
+   * <code>string registrationDate = 3;</code>
    * @return The bytes for registrationDate.
    */
   com.google.protobuf.ByteString
       getRegistrationDateBytes();
 
   /**
-   * <code>bool healthy = 5;</code>
+   * <code>bool healthy = 4;</code>
    * @return The healthy.
    */
   boolean getHealthy();

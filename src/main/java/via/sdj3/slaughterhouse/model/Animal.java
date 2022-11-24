@@ -9,8 +9,6 @@ public class Animal
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    @ManyToOne
-    private Farm farm;
     @OneToOne
     private AnimalType animalType;
     @Column(name = "weight")
@@ -20,10 +18,9 @@ public class Animal
     @Column(name = "healthy")
     private boolean healthy;
 
-    public Animal(int id, Farm farm, AnimalType animalType, double weight, String registrationDate, boolean healthy)
+    public Animal(int id, AnimalType animalType, double weight, String registrationDate, boolean healthy)
     {
         this.id = id;
-        this.farm = farm;
         this.animalType = animalType;
         this.weight = weight;
         this.registrationDate = registrationDate;
@@ -32,16 +29,6 @@ public class Animal
 
     public Animal()
     {
-    }
-
-    public Farm getFarm()
-    {
-        return farm;
-    }
-
-    public void setFarm(Farm farm)
-    {
-        this.farm = farm;
     }
 
     public AnimalType getAnimalType()
