@@ -2,9 +2,6 @@ package via.sdj3.slaughterhouse.controllers;
 
 
 
-public class AnimalTypeController
-{
-
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
