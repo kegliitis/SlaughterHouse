@@ -7,4 +7,5 @@ import via.sdj3.slaughterhouse.model.AnimalPart;
 @Repository
 public interface AnimalPartRepository extends JpaRepository<AnimalPart, Integer>
 {
+
 }
