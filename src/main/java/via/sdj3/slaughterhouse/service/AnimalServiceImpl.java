@@ -1,6 +1,7 @@
 package via.sdj3.slaughterhouse.service;
 
 import io.grpc.stub.StreamObserver;
+import org.lognet.springboot.grpc.GRpcService;
 import via.sdj3.slaughterhouse.model.Animal;
 import via.sdj3.slaughterhouse.model.AnimalType;
 import via.sdj3.slaughterhouse.protobuf.animal.*;
@@ -12,6 +13,7 @@ import javax.persistence.Query;
 import java.util.List;
 import java.util.Optional;
 
+@GRpcService
 public class AnimalServiceImpl extends AnimalServiceGrpc.AnimalServiceImplBase
 {
     private EntityManagerFactory emf;

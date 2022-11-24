@@ -54,7 +54,7 @@ public class AnimalController
             return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
         }
     }
-    @GetMapping( value = "/animals/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping( value = "/animal/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> getAnimalById(@PathVariable("id") int id)
     {
         try
